@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="centered">
+        Give an URL that you'd like to search<br><br>
+        <form  action="{{ url_for('stats') }}" method="get">
+            <input id="bar" type="text" name="url" value=""><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="results">
+        <p>{{ param }}</p>
+        <div class="scr_table">
+            <table>
+                <tr>
+                    <th>Key word</th>
+                    <td>Number of occurences</td>
+                </tr>
+                {% for key, value in dict_res.items() %}
+                   <tr>
+                        <th> {{ key }} </th>
+                        <td> {{ value }} </td>
+                   </tr>
+                  {% endfor %}
+            </table>
+        </div>
+
+    </div>
+{% endblock content %}

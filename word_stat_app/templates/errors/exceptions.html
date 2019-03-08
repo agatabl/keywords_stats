@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+    {% block content %}
+        <div class="centered">
+
+        <p> An error occured. Are you sure the URL you've entered is valid?</p>
+        <!-- <p> {{ e }}</p> -->
+        <form  action="{{ url_for('home') }}" method="get">
+            <input type="submit" value="Go home">
+        </form>
+        </div>
+    {% endblock content %}

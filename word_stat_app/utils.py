@@ -3,11 +3,18 @@ import requests
 import re
 
 
-def parse_html(url):
-    response_html = requests.get(url)
-    if response_html.status_code != 404:
+def get_html(url_adress):
+    response_html = requests.get(url_adress)
+    if response_html.status_code == 404:
+        txt_response_html = None
+    else:
         txt_response_html = response_html.text
-        parsed_html = BeautifulSoup(txt_response_html, 'lxml')
+    return txt_response_html
+
+
+def parse_html(html_content):
+    if html_content:
+        parsed_html = BeautifulSoup(html_content, 'lxml')
         parsed_html.original_encoding
     else:
         parsed_html = None
@@ -15,6 +22,7 @@ def parse_html(url):
 
 
 def remove_scripts(parsed_html):
+    txt = parsed_html.body.get_text()
     for s in parsed_html.body.findAll('script'):
         s.decompose()
         txt = parsed_html.body.get_text()

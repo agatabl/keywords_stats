@@ -1,6 +1,6 @@
 from word_stat_app import app
 from flask import render_template, url_for, request
-from word_stat_app.utils import parse_html, count_words, find_keywords
+from word_stat_app.utils import parse_html, count_words, find_keywords, get_html
 
 
 @app.route("/")
@@ -14,7 +14,8 @@ def home():
 def stats():
     param = request.args.get('url')
     try:
-        parsed_html = parse_html(param)
+        given_html = get_html(param)
+        parsed_html = parse_html(given_html)
         if parsed_html is not None:
             word_list = find_keywords(parsed_html)
             dict_res = count_words(parsed_html, word_list)

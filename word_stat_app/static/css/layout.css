@@ -1,5 +1,5 @@
 html,body {
-    height: 100%;
+
     font-family: sans-serif;
 }
 .head_foot{
@@ -24,6 +24,12 @@ html,body {
     font-size: 10px;
     padding: 10px;
     bottom: 0;
+}
+
+#btn_stats{
+    position: absolute;
+    top: 200px;
+    left: 200px;
 }
 
 .centered {

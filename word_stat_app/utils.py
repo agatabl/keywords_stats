@@ -5,11 +5,10 @@ import re
 
 def get_html(url_adress):
     response_html = requests.get(url_adress)
-    if response_html.status_code == 404:
-        txt_response_html = None
+    if response_html.ok:
+        return response_html.text
     else:
-        txt_response_html = response_html.text
-    return txt_response_html
+        return None
 
 
 def parse_html(html_content):
@@ -21,7 +20,7 @@ def parse_html(html_content):
     return parsed_html
 
 
-def remove_scripts(parsed_html):
+def get_body_text(parsed_html):
     txt = parsed_html.body.get_text()
     for s in parsed_html.body.findAll('script'):
         s.decompose()
@@ -30,13 +29,11 @@ def remove_scripts(parsed_html):
 
 
 def find_keywords(parsed_html):
-
     list_all_kwords = []
     for kword_attr in parsed_html.find_all("meta", attrs={'name':re.compile('(?i)keywords')}):
         try:
             kw_content = kword_attr['content']
             kword_lst = [x.strip() for x in kw_content.split(',')]
-
         except Exception as e:
             kword_lst = []
 
@@ -55,7 +52,7 @@ def create_dict(words):
 
 def count_words(parsed_html, words):
     result_dict = create_dict(words)
-    txt = remove_scripts(parsed_html)
+    txt = get_body_text(parsed_html)
     if words:
         for word in words:
             count = 0

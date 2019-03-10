@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="results">
+        <h3>Searched website: </h3>
         <p>{{ param }}</p>
         <div class="scr_table">
             <table>
@@ -16,6 +17,11 @@
                   {% endfor %}
             </table>
         </div>
+    </div>
+    <div id="btn_stats">
+        <form  action="{{ url_for('home') }}" method="get">
+        <input type="submit" value="Go home">
+    </form>
 
     </div>
 {% endblock content %}

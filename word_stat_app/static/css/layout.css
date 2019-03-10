@@ -1,5 +1,6 @@
 html,body {
-
+    height: auto;
+    width: auto;
     font-family: sans-serif;
 }
 .head_foot{
@@ -32,6 +33,7 @@ html,body {
     left: 200px;
 }
 
+
 .centered {
   position: absolute;
   top: 50%;
@@ -46,8 +48,8 @@ html,body {
 
 .results{
     position: absolute;
-    left: 40%;
-    top: 100px;
+    left: 35%;
+    top: 10%;
 }
 
 .scr_table{

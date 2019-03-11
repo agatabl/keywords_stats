@@ -1,6 +1,8 @@
 # Keywords stats
 
 Prosta aplikacja webowa analizująca liczbę wystąpnień słowa kluczowego w treści strony. 
+Dostępna pod adrresem:
+http://agata.pythonanywhere.com
 
 Aplikacja Keyword stats przyjmuje od użytkownika adres URL i wyświetla informację ile razy każde 
 słowo kluczowe zdefiniowane w headzie strony występuje w 
@@ -17,6 +19,7 @@ ________________________________________________________________________________
 ENG
 
 Simple Flask app for counting keywords on websites.
+Available at: http://agata.pythonanywhere.com
 
 Interface asks user for an URL and analyze the wbsite in terms of occurence of keywords defined in website's head.
 

@@ -5,7 +5,7 @@ from flask import render_template
 def get_stats(url):
     if url.startswith("http://") is False and url.startswith("https://") is False:
         url = "http://" + url
-    print(url)
+    
     try:
         given_html = get_html(url)
         parsed_html = parse_html(given_html)

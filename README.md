@@ -2,7 +2,7 @@
 
 Prosta aplikacja webowa analizująca liczbę wystąpnień słowa kluczowego w treści strony. 
 
-Dostępna pod adrresem:
+Dostępna pod adresem:
 http://agata.pythonanywhere.com
 
 Aplikacja Keyword stats przyjmuje od użytkownika adres URL i wyświetla informację ile razy każde 

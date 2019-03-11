@@ -3,34 +3,30 @@ html,body {
     width: auto;
     font-family: sans-serif;
 }
-.head_foot{
-    background-color: #173F5F ;
-    text-align: center;
-    color: #fff;
-    font-family: sans-serif;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    }
+
 
 #top{
     font-size: 15px;
     padding: 20px;
     top: 0;
+    position: relative;
 }
 
 #bottom{
-    /* position: fixed; */
+    position: fixed;
     font-size: 10px;
     padding: 10px;
     bottom: 0;
+
 }
 
-#btn_stats{
-    position: absolute;
-    top: 200px;
-    left: 200px;
+#bar{
+    width: 250px;
+}
+
+#home_btn{
+    padding-top: 30px;
+    padding-bottom: 70px;
 }
 
 
@@ -41,23 +37,24 @@ html,body {
   margin: -100px 0 0 -150px;
   }
 
-.btn {
-    position: relative;
-    top: 10px;
-}
 
-.results{
-    position: absolute;
-    left: 35%;
-    top: 10%;
+.result{
+    width: 40%;
+    margin-left: 40%;
 }
 
 .scr_table{
-    height: 400px;
+    height: auto;
     overflow:auto;
-
+    width: 100%;
 }
 
-#bar{
-    width: 250px;
-}
+.head_foot{
+    background-color: #173F5F ;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    }

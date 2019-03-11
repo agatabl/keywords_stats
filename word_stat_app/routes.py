@@ -12,4 +12,5 @@ def home():
 @app.route("/stats", methods=['GET'])
 def stats():
     param = request.args.get('url')
+
     return get_stats(param)
